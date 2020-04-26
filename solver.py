@@ -1,14 +1,5 @@
-board = [
-    [7, 8, 0, 4, 0, 0, 1, 2, 0],
-    [6, 0, 0, 0, 7, 5, 0, 0, 9],
-    [0, 0, 0, 6, 0, 1, 0, 7, 8],
-    [0, 0, 7, 0, 4, 0, 2, 6, 0],
-    [0, 0, 1, 0, 5, 0, 9, 3, 0],
-    [9, 0, 4, 0, 6, 0, 0, 0, 5],
-    [0, 7, 0, 3, 0, 0, 0, 1, 2],
-    [1, 2, 0, 0, 0, 7, 4, 0, 0],
-    [0, 4, 9, 2, 0, 6, 0, 0, 7]
-]
+from scraper import getBoard
+
 # this method is used to print the board both
 # before and after solving the sudoku
 def printBoard(board):
@@ -34,6 +25,7 @@ def find_empty_cell(board):
                 return (i, j)
     return None
 
+# this method is used to check if the constraints are met
 def constraints(board, val, pos):
     # Check that the valber being inserted does not 
     # appear in the row already (check that we did
@@ -66,6 +58,8 @@ def constraints(board, val, pos):
     # to instert the valber in the current cell
     return True
 
+# this method uses the backtracking algorithm to
+# solve the Soduku board
 def solver(board):
     # retrieve a valid empty cell
     # since our algorithm proceeds from left to
@@ -101,15 +95,23 @@ def solver(board):
     return False
 
 def main():
-    print("Given Sudoku Board: ")
+    # get an unsolved sudoku board by scraping (https://www.sudokuweb.org/)
+    board = getBoard()
+    print("=====================")
+    print("Scraped Sudoku Board: ")
+    print("=====================")
+
     # print the board to be solved
     printBoard(board)
+
     # solve the sudoku board
     solver(board)
+
     # print the solution
     print()
     print("=====================")
     print("Solution: ")
+    print("=====================")
     printBoard(board)
     
 
