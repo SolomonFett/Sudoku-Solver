@@ -1,6 +1,6 @@
 # Sudoku-Solver
 
-This progam retrieves a randomly generated sudoku puzzle from https://www.sudokuweb.org/ and solves it using the  [backtracking algorithm](https://en.wikipedia.org/wiki/Backtracking).
+This progam retrieves a randomly generated sudoku puzzle from https://www.sudokuweb.org/ , by web scraping, and solves it using the  [backtracking algorithm](https://en.wikipedia.org/wiki/Backtracking).
 
 * The zero's in the unsolved sudoku puzzle represent unfound values
 
