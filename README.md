@@ -4,6 +4,10 @@ This progam retrieves a randomly generated sudoku puzzle from https://www.sudoku
 
 * The zero's in the unsolved sudoku puzzle represent unfound values
 
+### Prerequisites
+* Python3
+* Pip3
+
 ### Setup
 
 In order to install the required dependencies for this program, you will need to run
