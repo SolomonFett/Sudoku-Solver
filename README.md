@@ -2,6 +2,8 @@
 
 This progam retrieves a randomly generated sudoku puzzle from https://www.sudokuweb.org/ and solves it using the  [backtracking algorithm](https://en.wikipedia.org/wiki/Backtracking).
 
+* The zero's in the unsolved sudoku puzzle represent unfound values
+
 ### Setup
 
 In order to install the required dependencies for this program, you will need to run
