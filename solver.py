@@ -16,7 +16,7 @@ def printBoard(board):
                 print(str(board[i][j]) + " ", end="")
 
 # this method is used to find the nearest valid empty cell
-def find_empty_cell(board):
+def findEmptyCell(board):
     # loop through every row and column to find the
     # nearest empty cell
     for i in range(len(board)):
@@ -65,7 +65,7 @@ def solver(board):
     # since our algorithm proceeds from left to
     # right, we will retrieve the next available 
     # cell to the right (or below) our current cell
-    find = find_empty_cell(board)
+    find = findEmptyCell(board)
 
     # base case: if a valide empty cell is not 
     # found, that means we have reached the end of
