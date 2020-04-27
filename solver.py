@@ -27,16 +27,16 @@ def findEmptyCell(board):
 
 # this method is used to check if the constraints are met
 def constraints(board, val, pos):
-    # Check that the valber being inserted does not 
+    # Check that the value being inserted does not 
     # appear in the row already (check that we did
-    # not just insert a valber into the same location)
+    # not just insert a value into the same location)
     for i in range(len(board[0])):
         if board[pos[0]][i] == val and pos[1] != i:
             return False
 
-    # Check that the valber being inserted does not 
+    # Check that the value being inserted does not 
     # appear in the column already (check that we did
-    # not just insert a valber into the same location)
+    # not just insert a value into the same location)
     for i in range(len(board)):
         if board[i][pos[1]] == val and pos[0] != i:
             return False
@@ -47,7 +47,7 @@ def constraints(board, val, pos):
     box_x = pos[1] // 3
     box_y = pos[0] // 3
 
-    # Using the above, Check that the valber being 
+    # Using the above, Check that the value being 
     # inserted does not appear in the 3 by 3 box that
     # the given cell belongs to
     for i in range(box_y*3, box_y*3 + 3):
@@ -55,7 +55,7 @@ def constraints(board, val, pos):
             if board[i][j] == val and (i,j) != pos:
                 return False
     # if all contraints are met, then we are allowed
-    # to instert the valber in the current cell
+    # to instert the value in the current cell
     return True
 
 # this method uses the backtracking algorithm to
